@@ -55,15 +55,12 @@ footer:hover {
   h1 {
     font-size: 4.5rem;
   }
-
   img {
     width: 60%;
   }
-
   footer {
     margin-top: 10%;
   }
-
   .gameContainer {
     width: 80%;
   }
@@ -73,19 +70,15 @@ footer:hover {
   h1 {
     font-size: 3.8rem;
   }
-
   img {
     width: 60%;
   }
-
   footer {
     margin-top: 20%;
   }
-
   .gameContainer {
     width: 80%;
   }
-
   .dice {
     width: 49%;
   }

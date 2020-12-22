@@ -1,27 +1,27 @@
 //select player's dices & rolling button & message box
-var playerDice   = document.querySelector("#img1");
-var computerDice = document.querySelector("#img2");
-var rollingBtn   = document.querySelector("#rollingBtn");
-var message      = document.querySelector("#message");
+const playerDice = document.querySelector("#img1");
+const computerDice = document.querySelector("#img2");
+const rollingBtn = document.querySelector("#rollingBtn");
+const message = document.querySelector("#message");
 
 //add Events
 rollingBtn.addEventListener("click", gameRoll);
 
 //add some margin in the beginning
-function renderer(){
+function renderer() {
     playerDice.parentElement.classList.toggle("dice-space");
 }
 
 //generate a random 1-6 number
-function randomRoll(){
-    return Math.floor(Math.random() *6) + 1;
+function randomRoll() {
+    return Math.floor(Math.random() * 6) + 1;
 }
 
 //main function
-function gameRoll(){
+function gameRoll() {
     playerDice.parentElement.classList.remove("dice-space");
-    var playerScore = randomRoll();
-    var computerScore = randomRoll();
+    const playerScore = randomRoll();
+    const computerScore = randomRoll();
 
     playerDice.setAttribute("src", "images/dice" + playerScore + ".png");
     computerDice.setAttribute("src", "images/dice" + computerScore + ".png");
@@ -31,13 +31,9 @@ function gameRoll(){
 
 //changing message
 function messager(playerScore, computerScore) {
-    if(playerScore > computerScore) {
-        message.textContent = "You won!";
-    } else if(computerScore > playerScore) {
-        message.textContent = "You lost. :(";
-    } else {
-        message.textContent = "Draw!";
-    }
+    if (playerScore > computerScore) message.textContent = "You won!";
+    else if (computerScore > playerScore) message.textContent = "You lost. :(";
+    else message.textContent = "Draw!";
 }
 
 renderer();
